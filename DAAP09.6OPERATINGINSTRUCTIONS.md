@@ -1,16 +1,16 @@
--   INTRODUCTION
--   A. STARTING PREDAAP09 ON A MAC OSX PLATFORM
--   B: STARTING PREDAAP09 ON A WINDOWS PLATFORM
--   C: DAAP09.6 OPERATING INSTRUCTIONS
--   D: TRANSCRIBING RULES I: GENERAL INFORMATION
--   E: TRANSCRIBING RULES II: NECESSARY SYNTAX
--   F: TRANSCRIBING RULES III: OPTIONAL SYNTAX
--   G: TRANSCRIBING RULES IV: RULES FOR WORDS
--   H: CONSTRUCTING NEW DICTIONARIES
--   I: preDAAP09 and DAAP09.6 OUTPUT FILES
--   J: ERROR MESSAGES
--   FURTHER INFORMATION
--   CITATION INFORMATION
+[INTRODUCTION](#INTRODUCTION)
+[A. STARTING PREDAAP09 ON A MAC OSX PLATFORM](#A)
+[B: STARTING PREDAAP09 ON A WINDOWS PLATFORM](#B)
+[C: DAAP09.6 OPERATING INSTRUCTIONS](#C)
+[D: TRANSCRIBING RULES I: GENERAL INFORMATION](#D)
+[E: TRANSCRIBING RULES II: NECESSARY SYNTAX](#E)
+[F: TRANSCRIBING RULES III: OPTIONAL SYNTAX](#F)
+[G: TRANSCRIBING RULES IV: RULES FOR WORDS](#G)
+[H: CONSTRUCTING NEW DICTIONARIES](#H)
+[I: preDAAP09 and DAAP09.6 OUTPUT FILES](#I)
+[J: ERROR MESSAGES](#J)
+[FURTHER INFORMATION](#FURTHER)
+[CITATION INFORMATION](#CITATION)
 
 INTRODUCTION
 ------------
@@ -177,7 +177,7 @@ Rules for words. The following are intended to standardize the decisions that th
 
 8.  Unclear words. These are noted in square brackets; if the speaker says "the" followed by one or more unclear words, type "the [unclear]". It is not necessary to try to preserve the number of unclear words.
 
-9.  Misspoken words. If the speaker misspeaks, or if you hear the speaker as misspeaking, and there is no doubt as to the correct meaning, type the correct word. For example, if the speaker says something that sounds like, 'I want to Philadelphia yesterday, and walked on Market Street', this is clearly a misspeaking, and the correct word is 'went', rather than 'want', so the transcription should read, 'I went [want] to É' (one might need to code either "Philadelphia" or "Market Street").
+9.  Misspoken words. If the speaker misspeaks, or if you hear the speaker as misspeaking, and there is no doubt as to the correct meaning, type the correct word. For example, if the speaker says something that sounds like, 'I want to Philadelphia yesterday, and walked on Market Street', this is clearly a misspeaking, and the correct word is 'went', rather than 'want', so the transcription should read, 'I went [want] to ...' (one might need to code either "Philadelphia" or "Market Street").
 
 10. Apostrophes. Use apostrophes as usual for contractions, such as "don't", "can't", "I'd", and for possessives.
 
