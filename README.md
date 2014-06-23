@@ -31,7 +31,7 @@ This Repository includes the following files:
 		R (Reflection)
 		SenS (Sensory-Somatic)
 
-Note that the Weighted Referential Activity Dictionary (WRAD) is not included in this repository as it is not covered by the GNU General Public License. The WRAD can be downloaded directly from www.thereferentialprocess.org.
+**Note that the Weighted Referential Activity Dictionary (WRAD) is not included in this repository as it is not covered by the GNU General Public License. The WRAD can be downloaded directly from www.thereferentialprocess.org.**
 	
 	
 ##INSTALLING DAAP09.6 FOR MAC OSX

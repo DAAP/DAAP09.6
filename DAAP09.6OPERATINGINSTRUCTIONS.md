@@ -2,6 +2,8 @@
 Bernard Maskit  
 Sunday, June 22, 2014  
 
+##INTRODUCTION
+
 This document contains an overview of the current version (DAAP09.6) of the Discourse Attributes Analysis Program (DAAP) using Word Count as the independent variable, including transcribing rules, an outline of the DAAP09.6 procedures and the DAAP09.6 output.  An overview of the DAAP software may be found at: http://www.thereferentialprocess.org/the-discourse-attributes-analysis-program-daap.
 
 DAAP09 has two distinct tracks: DAAP09.6 for analyzing texts involving multiple speakers, and SimDAAP09 for analyzing texts with only one speaker or writer.
@@ -12,20 +14,6 @@ Before running preDAAP09, ensure that the text files to be processed have the co
 DAAP09.6 requires that you first run preDAAP09; after each run, you need to check the LogFile (```ProjectLOG.txt```) and terminal window for transcription, syntax and other errors. These must be corrected before DAAP09.6 itself is run.
 
 In order to run preDAAP09, the following files must be in your DAAP folder: ```ListL2, ListL8, ListL11, ListW2, TheDic```. These files are needed for the preDAAP09 function of disambiguation.
-
-##CONTENTS
-
-A. STARTING PREDAAP09 ON A MAC OSX PLATFORM  
-B: STARTING PREDAAP09 ON A WINDOWS PLATFORM  
-C: DAAP09.6.pl OPERATING INSTRUCTIONS		
-D: TRANSCRIBING RULES I: GENERAL INFORMATION	
-E: TRANSCRIBING RULES II: NECESSARY SYNTAX  
-F: TRANSCRIBING RULES III: OPTIONAL SYNTAX  	
-G: TRANSCRIBING RULES IV: RULES FOR WORDS  
-H: CONSTRUCTING NEW DICTIONARIES	
-I: preDAAP09.pl and DAAP09.6.pl OUTPUT FILES  		
-J: ERROR MESSAGES  
-
 
 ##A. STARTING PREDAAP09 ON A MAC OSX PLATFORM
 
@@ -176,7 +164,6 @@ f) There are a few doubly hyphenated words, such as "mother-in-law". Please type
 
 g) Hyphens. Use hyphens only for compound words as above, and for marking incomplete words.  
 Denote an incomplete word by ending it with exactly one hyphen followed by a space. For example, if the speaker stutters and says: "f f fail"; this should be transcribed as "f- f- fail"; note the spaces after the hyphens. If the speaker starts a word, hesitates, and then either completes the word or says another word, type the first partial word with a hyphen at the end, followed by a space. For example if the speaker says "some", then hesitates, then says "somewhat", transcribe it as "some- somewhat". The reason for this rule is that DAAP counts incomplete words as disfluencies. However, if the speaker says 'I I I don't know what to say'; these are not incomplete words, and this sentence should be transcribed as shown (DAAP also treats repeated words as disfluencies).
-
 Do not use hyphens for purposes other than incomplete words, and binding parts of words, as in non-judgmental. Some word processors, including MS Word, sometimes change hyphens used in other contexts into em-dashes or en-dashes, which can cause difficulties.
 
 h) Unclear words. These are noted in square brackets; if the speaker says "the" followed by one or more unclear words, type "the [unclear]". It is not necessary to try to preserve the number of unclear words.
@@ -195,8 +182,7 @@ n) Disfluencies. The usual disfluencies are: 'well', 'like', you know', 'I mean'
 
 o) Slang. preDAAP09 processes a few contractions without apostrophes, these include "gonna", "wanna" and "gotta". For all others, and for all slang expressions, please type the corresponding English words. For example, if the speaker says "yep", please type "yes"; if the speaker says "gotcha", please type "got you".
 Punctuation Marks. Use punctuation marks, such as commas, periods, semicolons and question marks as in customary usage. preDAAP09 uses these to decide if, for example, the word 'like' is being used as a disfluency. Do not use exclamation marks to denote emphasis.
-
-Pauses. If there is need to keep track of time, there are separate instructions for inserting time markers. If the project manager wishes you to keep track of pauses, you may use slashes ```/```, to indicate pauses of up to five seconds (one slash for each second). Do not use longer dashes (em-dashes or en-dashes) or three dots (É) for this purpose. You should leave a space both before and after each of these slashes. 
+Pauses. If there is need to keep track of time, there are separate instructions for inserting time markers. If the project manager wishes you to keep track of pauses, you may use slashes ```/```, to indicate pauses of up to five seconds (one slash for each second). Do not use longer dashes (em-dashes or en-dashes) or three dots (...) for this purpose. You should leave a space both before and after each of these slashes. 
 
 p) Unusual Symbols. Some word processors on occasion change hyphens to em-dashes or en-dashes. Please use hyphens only as listed above.  Some word processors change ... into a special ellipses symbol; to avoid this, do not type three dots in a row.
 
@@ -219,10 +205,9 @@ A few of the output files are produced by preDAAP09, and are marked as such. All
 **1. LOGFILES** Before the final run, check the LogFiles (```ProjectLOG.txt``` and ```ProjectLOGF.txt```) for errors in the text. These should be corrected in the original text files, and both PreDAAP09, and DAAP09.6 rerun.
 
 **2. OUTPUT FILES FOR EACH TEXT FILE**
+
 a. There is a separate MARKED TEXT for each file (```Text1MTT.txt```, ```Text2MTT.txt```, etc.). Each of these files reproduces the material in the original text, and adds some markers. The turns of speech are counted, and there is a marker in square brackets at the beginning of each turn of speech showing its number. There is a marker of the form [a] every 50 counted words (words in parentheses or square brackets are not counted), where 'a' is the current word count starting at the beginning of the text. This number 50 is the MTTNum near the beginning of ```preDAAP09.pl```, and can be changed.
-
 There is also some information at the end of the marked text concerning the total number of words, and the total number of turns of speech. This file is produced by preDAAP09.
-
 There is a list of new words, those not in any dictionary in the Dics folder or in the TheDic file,  for each file (```File1LLD.txt```, ```File2LLD.txt```, etc.). This file is produced by preDAAP09. 
 
 b. There is a separate TYPE-TOKEN RATIO file for each text (```Text1TTR.txt```, ```Text2TTR.txt```, etc.). This file contains, for each speaker, a list of the distinct words (types) spoken by that speaker, together with the number of occurrences of that type (tokens). The file also contains, for each speaker, the number of distinct types, the total number of tokens, and their ratio, the type-token ratio. This file can be scanned with a spell checker to look for spelling errors. 
@@ -232,39 +217,35 @@ c. There is a separate SMOOTH File for each text (```Text1SMT.csv```, ```Text2SM
 d. There is a separate WORD File for each text (```Text1RAW.csv```, ```Text2RAW.csv```, etc.). This file contains a list of all the (counted) words in the file; for each word, the file shows the number of the speaker and the dictionary values assigned to the word. This file is primarily for use by the DAAP operator in error checking.
 
 **3. PROJECT OUTPUT FILES**
-a. There is an overall COVERAGE File (```ProjectGLB.csv```). This file contains information for each file in the folder that is independent of speaker: the number of words, the number of turns of speech, the number of Non-Turn-Vocalizations (marked by ```\st```); and then, for each dictionary, the coverage, which is the percent of words in the text that match the dictionary, and the number of dictionary matches. (Some of this is redundant: the coverage equals the number of dictionary matches divided by the total number of words.)
+
+a. There is an overall COVERAGE File (```ProjectGLB.csv```). This file contains information for each file in the folder that is independent of speaker: the number of words, the number of turns of speech, the number of Non-Turn-Vocalizations (marked by ```\st```); and then, for each dictionary, the coverage, which is the percent of words in the text that match the dictionary, and the number of dictionary matches. (Some of this is redundant: the coverage equals the number of dictionary matches divided by the total number of words.)  
 
 b. There is an overall TURN File (```ProjectTRN.csv```). This file contains a separate row for each turn of speech. The columns give the name of the particular text file; the turn number (this starts again at 1 for each file); the speaker number; the actualization of each category (there is a separate column for each category); the number of words in this turn of speech; the number of the word at which this turn of speech starts; the mean score for each unweighted dictionary; the mean score, the mean high score, and the high score proportion for each weighted dictionary; and (if requested) the covariations between each pair of dictionaries.
-
 The HIGH SCORE PROPORTION for a weighted dictionary is the proportion of words for which the smoothed dictionary density is above the neutral value of .5. (For psychological or linguistic variables, negative quantities are sometimes difficult to interpret. Each weighted dictionary uses weights between -1 and +1 with 0 as neutral value, so words not in the dictionary are given dictionary score of 0, as they are with unweighted dictionaries. DAAP09.6.pl linearly transforms these weights to lie between 0 and 1 with .5 as the neutral value.)
-
 The MEAN HIGH SCORE for a weighted dictionary is the average value of the amount by which the smoothed dictionary function for that dictionary is above the neutral value of .5. That is, we look only at the words for which the smoothed dictionary function is above .5, and we take the average value, for those words only, of the difference between this smoothed dictionary function and .5.
-
 The COVARIATION between a pair of dictionaries is a measure that is computationally related to the (Pearson) correlation coefficient, but does not have the same statistical meaning. The weighted dictionaries all have a natural neutral value of .5, the unweighted dictionaries are each given their mean over the entire text as a neutral value. The covariation is a measure of the extent to which the smoothed dictionary densities are simultaneously above, and simultaneously below, their neutral values.
-
-CAUTION: The covariations are generally unreliable for texts with relatively few words, or for texts consisting in large part of segments consisting of relatively few words. They are generally reliable for texts with more than 25 words.
+CAUTION: The covariations are generally unreliable for texts with relatively few words, or for texts consisting in large part of segments consisting of relatively few words. They are generally reliable for texts with more than 25 words.  
 
 c. There is an overall FIRST AGGREGATION File (```ProjectAG1.csv```). This file contains a separate set of rows for each text. For each text, there is a separate row for each speaker and for each actualization of each category. For example, if there are two speakers, two categories labeled as date and section, where the actualizations of date are Jan10, Feb10, Mar10, and the actualizations of section are parents and children, there will be a total of 12  rows for this file: speaker 1, Jan10, parents; speaker2, Jan10, parents; speaker1, Jan10, Children; speaker2, Jan10, Children; etc. The columns give the File name; speaker, Name of first category, Name of second category, etc.; number of words; number of turns of speech; mean score for each unweighted dictionary; mean score, mean high score, and mean high proportion for each weighted dictionary; and (if requested) the covariations between each pair of dictionaries.
+At the bottom of the first aggregation file, there is a separate set of rows and columns. There is one row for each speaker. The columns give speaker, number of words, overall mean score for each unweighted dictionary, and overall mean score, mean high score, and high score proportion for each unweighted dictionary. CAUTION: The interpretation of these can be problematic if some of speakers in different files are different people.   
 
-At the bottom of the first aggregation file, there is a separate set of rows and columns. There is one row for each speaker. The columns give speaker, number of words, overall mean score for each unweighted dictionary, and overall mean score, mean high score, and high score proportion for each unweighted dictionary. CAUTION: The interpretation of these can be problematic if some of speakers in different files are different people. 
+d. There is a FIRST VARIATIONS File (```ProjectAG1SSD.csv```). This file contains the same rows as the First Aggregation File. For each row, the columns list the text file; the speaker, the number of words, the number of turns of speech, the name of the actualization for each category, and the average variation of each of the smoothed dictionary density functions. This average variation is computationally the same as the standard deviation, but does not carry the same statistical meaning.  
 
-d. There is a FIRST VARIATIONS File (```ProjectAG1SSD.csv```). This file contains the same rows as the First Aggregation File. For each row, the columns list the text file; the speaker, the number of words, the number of turns of speech, the name of the actualization for each category, and the average variation of each of the smoothed dictionary density functions. This average variation is computationally the same as the standard deviation, but does not carry the same statistical meaning.
+e. There is an overall SECOND AGGREGATION File (```ProjectAG2.csv```). As above, this file contains a separate set of rows and columns for each text file. However, the data from some of the categories are aggregated. At the beginning of each run, the operator is prompted to list the names of the categories to be aggregated. If, in the above example, the data from section are aggregated, then, for each file, there is a row for each speaker and each date, for a total of six rows. The columns are the same as the main part of the first aggregation file, except that there are no entries in the column labeled section.  
 
-e. There is an overall SECOND AGGREGATION File (```ProjectAG2.csv```). As above, this file contains a separate set of rows and columns for each text file. However, the data from some of the categories are aggregated. At the beginning of each run, the operator is prompted to list the names of the categories to be aggregated. If, in the above example, the data from section are aggregated, then, for each file, there is a row for each speaker and each date, for a total of six rows. The columns are the same as the main part of the first aggregation file, except that there are no entries in the column labeled section.
+f. There is a SECOND VARIATIONS File (```ProjectAG2SSD.csv```). This file has the same rows as the Second Aggregation File, and the same columns as the First Variations File, except that the data has been aggregated as in the second aggregation file.  
 
-f. There is a SECOND VARIATIONS File (```ProjectAG2SSD.csv```). This file has the same rows as the Second Aggregation File, and the same columns as the First Variations File, except that the data has been aggregated as in the second aggregation file.
+g. There is an overall Main Aggregation File (```ProjectAG0.csv```). There is a separate set of rows for each text file, one row for each speaker, and a final row for all speakers combined. The columns give the name of the text file; the speaker, labeled as 1, 2, ..., All; the number of words; the number of turns of speech; the mean score for each unweighted dictionary; the mean score, mean high score, and mean high proportion for each weighted dictionary; and (if requested) the overall covariations between each pair of dictionaries.  
 
-g. There is an overall Main Aggregation File (```ProjectAG0.csv```). There is a separate set of rows for each text file, one row for each speaker, and a final row for all speakers combined. The columns give the name of the text file; the speaker, labeled as 1, 2, ..., All; the number of words; the number of turns of speech; the mean score for each unweighted dictionary; the mean score, mean high score, and mean high proportion for each weighted dictionary; and (if requested) the overall covariations between each pair of dictionaries.
+h. There is an overall NEW LEFT-OVER-LIST file (```ProjectNewLOL.txt```). This file contains a list of the words (types) in the data files that are not in any of the dictionaries being used and are not in the TheDic file. This list is for the entire project, the TTR files contain the same information for each individual file.  
 
-h. There is an overall NEW LEFT-OVER-LIST file (```ProjectNewLOL.txt```). This file contains a list of the words (types) in the data files that are not in any of the dictionaries being used and are not in the TheDic file. This list is for the entire project, the TTR files contain the same information for each individual file.
+i. There is an OVERALL TYPE-TOKEN file  (```ProjectTTFile.txt```) containing a list of types and tokens for all speakers in all files in the project.  
 
-i. There is an OVERALL TYPE-TOKEN file  (```ProjectTTFile.txt```) containing a list of types and tokens for all speakers in all files in the project.
+j. There is a TYPE-TOKEN DICTIONARY MATCH file (```ProjectTTGlob.csv```) in spreadsheet format showing all types, the number of their tokens and their dictionary matches, for all files in the Project.  
 
-j. There is a TYPE-TOKEN DICTIONARY MATCH file (```ProjectTTGlob.csv```) in spreadsheet format showing all types, the number of their tokens and their dictionary matches, for all files in the Project.
+k. There is SPEAKER SEPARATED TYPE-TOKEN file (```ProjectTTSGlob.txt```) showing types and tokens for each speaker aggregated across the different files in the project. This file also shows the total number of types, the total number of tokens, and the type-token ratio for each speaker. As for the First Aggregation File, the interpretation of these data can be problematic if the speakers with the same number are different people for different files.  
 
-k. There is SPEAKER SEPARATED TYPE-TOKEN file (```ProjectTTSGlob.txt```) showing types and tokens for each speaker aggregated across the different files in the project. This file also shows the total number of types, the total number of tokens, and the type-token ratio for each speaker. As for the First Aggregation File, the interpretation of these data can be problematic if the speakers with the same number are different people for different files.
-
-l. OUTPUT FILES FOR Z-DICTIONARIES. If you are using one or more Z-dictionaries (dictionaries that use word stems or lemmas), there are two separate ZMat output files, (```ProjectZMat.txt``` and ```ZGoodQ```). These files are designed for use with the  ```ZGood```, ```ZBad``` and ```ZChange``` files. The ```ZGoodQ``` file contains a list of words (types) that partially matched a lemma in a Z-Dictionary; that is, the entire word did not match any word in the Z-Dictionary, but the first few characters did, and the word in the file does not appear in any of the files: ZGood, ZBad, or ZChange, (for example, "got" might be a word in one of the files, but not in a particular Z-Dictionary, while "go" is in that Z-Dictionary.)  In this case, the word in the file appears in the ```ZGoodQ``` file, while both the word, and the lemma it partially matches are in the ```ZMat``` file. (In this example, the ZMat file contains a line with "go,got" in it.) The point of these files is to question the particular match. The operator needs to put this word ("got" in the example) either in the ZBad or ZGood files, or in the case of this example in the ZChange file as "got get"), so that, at the next run, DAAP09.6 will know how to handle this word with respect to the given Z-Dictionaries.
+l. OUTPUT FILES FOR Z-DICTIONARIES. If you are using one or more Z-dictionaries (dictionaries that use word stems or lemmas), there are two separate ZMat output files, (```ProjectZMat.txt``` and ```ZGoodQ```). These files are designed for use with the  ```ZGood```, ```ZBad``` and ```ZChange``` files. The ```ZGoodQ``` file contains a list of words (types) that partially matched a lemma in a Z-Dictionary; that is, the entire word did not match any word in the Z-Dictionary, but the first few characters did, and the word in the file does not appear in any of the files: ZGood, ZBad, or ZChange, (for example, "got" might be a word in one of the files, but not in a particular Z-Dictionary, while "go" is in that Z-Dictionary.)  In this case, the word in the file appears in the ```ZGoodQ``` file, while both the word, and the lemma it partially matches are in the ```ZMat``` file. (In this example, the ZMat file contains a line with "go,got" in it.) The point of these files is to question the particular match. The operator needs to put this word ("got" in the example) either in the ZBad or ZGood files, or in the case of this example in the ZChange file as "got get"), so that, at the next run, DAAP09.6 will know how to handle this word with respect to the given Z-Dictionaries.  
 
 ##J: ERROR MESSAGES
 
@@ -316,7 +297,7 @@ is not.
 
 **ERROR 13 Speaker ID** There must be a ```\s``` speaker identification immediately after a ```\t Category:Actualization``` line or set of such lines.
 
-**ERROR 14 Missing \c9** Each textile must end with the code: 
+**ERROR 14 Missing ```\c9```** Each textile must end with the code: 
 
 ```
 \c9
@@ -326,8 +307,22 @@ on a line by itself. However, you may insert a line with this code at any point 
 
 NOTE: For each text file PreDAAP09 produces a file called ```TextFile.a.txt``` in the Projects Folder. On runs past the first, it reports an ERROR 14 for this ```TextFile.a.txt```. This ERROR 14 message may be safely ignored. 
 
-##FURTHER READING##
+##FURTHER INFORMATION
+
+Additional information about the DAAP software may be found at: http://www.thereferentialprocess.org/the-discourse-attributes-analysis-program-daap
+
+The public GitHub reposistory for the project is available at:  https://github.com/DAAP
 
 For a detailed discussion of the mathematics that underlie the DAAP software please see:
 
 Maskit, Bernard (2014): DAAPMath. figshare. http://dx.doi.org/10.6084/m9.figshare.928469 
+
+##CITATION INFORMATION
+
+This document may be cited as:
+
+Maskit, B. (2014). The Discourse Attributes Analysis Program (DAAP) Operating Instructions. figshare. http://dx.doi.org/10.6084/m9.figshare.947740
+
+The Discourse Attributes Analysis Program (DAAP) (Version 09.6.0) may be cited as:
+
+Maskit, B., Bucci, W., & Murphy, S. (2014). Discourse Attributes Analysis Program (DAAP) (Version 09.6.0) [Software]. Available from http://www.github.com/DAAP
