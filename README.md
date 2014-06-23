@@ -3,13 +3,12 @@
 DAAP09.6 is a command line program that can operate on either a Windows or Mac platform; it has not as yet been tested for operation on a Linux platform.
 
 This Repository includes the following files:
-
 	A. Programs:
 		PreDAAP09.pl
 		DAAP09.6.pl
 
 	B. License and Operating Instructions
-		DAAP09.6.pl Operating Instructions (as ```DAAP09.6OPERATINGINSTRUCTIONS.md``` and ```DAAP09.6OPERATINGINSTRUCTIONS.pdf```)
+		DAAP09.6.pl Operating Instructions
 		GNU General Public License
 
 	C. Word lists (dictionaries) necessary for operating the programs
@@ -51,7 +50,7 @@ Copy the text files to be processed into the Project folder. These files must be
 
 DAAP09.6.pl is written in perl; you need to have the perl interpreter installed on your computer. There are free downloads available at www.perl.org, and at www.activestate.com/activeperl.
 
-Create a new folder (in these instructions the name of this folder is "DAAP09"), and copy all the above files from the DAAP09.6 repository into this folder.
+ Create a new folder (in these instructions the name of this folder is "DAAP09"), and copy all the above files from the DAAP09.6 repository into this folder.
 
 Create a subfolder of the DAAP09 folder labeled "DicStore" and copy the Referential Process dictionary files (in D above) into this folder. Also download the file WRAD.Wt from the referential process website (www.thereferentialprocess.org) and copy it into this subfolder.
 
