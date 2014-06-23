@@ -13,21 +13,7 @@ DAAP09.6 requires that you first run preDAAP09; after each run, you need to chec
 
 In order to run preDAAP09, the following files must be in your DAAP folder: ```ListL2, ListL8, ListL11, ListW2, TheDic```. These files are needed for the preDAAP09 function of disambiguation.
 
-##CONTENTS
-
-A. [STARTING PREDAAP09 ON A MAC OSX PLATFORM][A]
-B: [STARTING PREDAAP09 ON A WINDOWS PLATFORM][B]		
-C: [DAAP09.6.pl OPERATING INSTRUCTIONS][C]				
-D: [TRANSCRIBING RULES I: GENERAL INFORMATION][D]		
-E: [TRANSCRIBING RULES II: NECESSARY SYNTAX][E]		
-F: [TRANSCRIBING RULES III: OPTIONAL SYNTAX][F]			
-G: [TRANSCRIBING RULES IV: RULES FOR WORDS][G]		
-H: [CONSTRUCTING NEW DICTIONARIES][H]				
-I: [preDAAP09.pl and DAAP09.6.pl OUTPUT FILES][I]			
-J: [ERROR MESSAGES][J]
-
-
-##A. STARTING PREDAAP09 ON A MAC OSX PLATFORM[A]
+##A. STARTING PREDAAP09 ON A MAC OSX PLATFORM
 
 To run preDAAP09, open a terminal window ```applications -> Utilities -> Terminal```. Inside the terminal window, use the Unix Change Directory ```cd``` command to navigate to the DAAP folder. 
 To see the list of folders in the current directory, type: ```ls <RETURN>```.
