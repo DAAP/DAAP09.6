@@ -260,15 +260,15 @@ Note that some of these errors are reported by PREDAAP.
 
 **ERROR 2 Unmatched parentheses** DAAP has completed its processing of a text file and ended with an unmatched open parenthesis, given as either a round or square bracket. DAAP does not process words in parentheses, so the word count given in square brackets in the marked text (MTT file), which is produced by preDAAP09, has stopped at the open parenthesis.
 
-**ERROR 3 Improper parentheses** A close parenthesis has occurred (either round or square bracket), with no open parenthesis preceding it. The LOGFile (either ```ProjectLog.txt``` or ```ProjectLogF.txt```) repeats the line in which this error occurs.
+**ERROR 3 Improper parentheses** A close parenthesis has occurred (either round or square bracket), with no open parenthesis preceding it. The LOGFile (either ProjectLog.txt or ProjectLogF.txt) repeats the line in which this error occurs.
 
-**ERROR 4 Unusual Word** DAAP only recognizes the usual printable characters; it does not recognize UTF characters. Many word processors use "smart quotes" or other special characters that are not part of the ASCII character set; this sometimes causes problems, especially if the text file was written on a different platform from the one that DAAP is currently running on. The unusual word is reported both on screen and in the ```ProjectLogF.txt``` file. A blank word may usually be safely ignored.
+**ERROR 4 Unusual Word** DAAP only recognizes the usual printable characters; it does not recognize UTF characters. Many word processors use "smart quotes" or other special characters that are not part of the ASCII character set; this sometimes causes problems, especially if the text file was written on a different platform from the one that DAAP is currently running on. The unusual word is reported both on screen and in the ProjectLogF.txt file. A blank word may usually be safely ignored.
 
 **ERROR 5 (Fatal) Missing Speaker** DAAP requires the speakers to be successively ordered; if there is a speaker 3, there must also be speakers 1 and 2. If you are using a Mac or the alternate procedure for a Windows platform, there will be a prompt asking if you wish to see the list of speakers that DAAP has recorded. (NOTE: The numbering of the speakers need not reflect the order in which they appear in the text.)
 
-**ERROR 6 Split Problem** PREDAAP09 has encountered an unusual problem. The LogFile, ```ProjectLog.txt``` shows the place at which the unusual problem has occurred; there is probably an unusual character here.
+**ERROR 6 Split Problem** PREDAAP09 has encountered an unusual problem. The LogFile, ProjectLog.txt shows the place at which the unusual problem has occurred; there is probably an unusual character here.
 
-**ERROR 7 (Fatal) Improper File Name** The file name contains an underscore or contains more than one period (dot). (However, note that PREDAAP starts with ```textile.txt```, and outputs ```textfile.c.txt```, which is read by DAAP09.6.)
+**ERROR 7 (Fatal) Improper File Name** The file name contains an underscore or contains more than one period (dot). (However, note that PREDAAP starts with textile.txt, and outputs textfile.c.txt, which is read by DAAP09.6.)
 
 **ERROR 8 Improper Backslash t line** Category markers must be of the form:
 
@@ -304,13 +304,11 @@ is not.
 
 **ERROR 14 Missing \c9** Each textile must end with the code: 
 
-```
-\c9
-```
+```\c9```
 
 on a line by itself. However, you may insert a line with this code at any point in a text file to tell DAAP where to stop processing. Text beyond this code will not be processed. 
 
-NOTE: For each text file PreDAAP09 produces a file called ```TextFile.a.txt``` in the Projects Folder. On runs past the first, it reports an ERROR 14 for this ```TextFile.a.txt```. This ERROR 14 message may be safely ignored. 
+NOTE: For each text file PreDAAP09 produces a file called TextFile.a.txt in the Projects Folder. On runs past the first, it reports an ERROR 14 for this TextFile.a.txt. This ERROR 14 message may be safely ignored. 
 
 ##FURTHER READING##
 
