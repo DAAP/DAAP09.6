@@ -9,7 +9,8 @@ This Repository includes the following files:
 		DAAP09.6.pl
 
 	B. License and Operating Instructions
-		DAAP09.6.pl Operating Instructions (as DAAP09.6OPERATINGINSTRUCTIONS.md and DAAP09.6OPERATINGINSTRUCTIONS.pdf)
+		DAAP09.6.pl Operating Instructions (as DAAP09.6OPERATINGINSTRUCTIONS.md and
+		DAAP09.6OPERATINGINSTRUCTIONS.pdf)
 		GNU General Public License
 
 	C. Word lists (dictionaries) necessary for operating the programs
