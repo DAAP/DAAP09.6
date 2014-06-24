@@ -1,23 +1,23 @@
 THE DISCOURSE ATTRIBUTES ANALYSIS PROGRAM (DAAP09.6) OPERATING INSTRUCTIONS
 ---------------------------------------------------------------------------
-*Bernard Maskit*
-*Sunday, June 22, 2014*
+*Bernard Maskit*  
+*Sunday, June 22, 2014*  
 
 CONTENTS
 ------------
 
-A. STARTING PREDAAP09 ON A MAC OSX PLATFORM
-B: STARTING PREDAAP09 ON A WINDOWS PLATFORM
-C: DAAP09.6 OPERATING INSTRUCTIONS
-D: TRANSCRIBING RULES I: GENERAL INFORMATION
-E: TRANSCRIBING RULES II: NECESSARY SYNTAX
-F: TRANSCRIBING RULES III: OPTIONAL SYNTAX
-G: TRANSCRIBING RULES IV: RULES FOR WORDS
-H: CONSTRUCTING NEW DICTIONARIES
-I: preDAAP09 and DAAP09.6 OUTPUT FILES
-J: ERROR MESSAGES
-FURTHER INFORMATION
-CITATION INFORMATION
+A. STARTING PREDAAP09 ON A MAC OSX PLATFORM  
+B: STARTING PREDAAP09 ON A WINDOWS PLATFORM  
+C: DAAP09.6 OPERATING INSTRUCTIONS  
+D: TRANSCRIBING RULES I: GENERAL INFORMATION  
+E: TRANSCRIBING RULES II: NECESSARY SYNTAX  
+F: TRANSCRIBING RULES III: OPTIONAL SYNTAX  
+G: TRANSCRIBING RULES IV: RULES FOR WORDS  
+H: CONSTRUCTING NEW DICTIONARIES  
+I: preDAAP09 and DAAP09.6 OUTPUT FILES  
+J: ERROR MESSAGES  
+FURTHER INFORMATION  
+CITATION INFORMATION  
 
 INTRODUCTION
 ------------
@@ -334,22 +334,20 @@ prefix), then write this as one word, that is, 'nonbelief.'
 type such words as unhyphenated; that is, "motherinlaw".
 
 7.  Hyphens. Use hyphens only for compound words as above, and for marking
-incomplete words.
-    Denote an incomplete word by ending it with exactly one hyphen followed by
-    a space. For example, if the speaker stutters and says: "f f fail"; this
-    should be transcribed as "f- f- fail"; note the spaces after the hyphens.
-    If the speaker starts a word, hesitates, and then either completes the
-    word or says another word, type the first partial word with a hyphen at
-    the end, followed by a space. For example if the speaker says "some", then
-    hesitates, then says "somewhat", transcribe it as "some- somewhat". The
-    reason for this rule is that DAAP counts incomplete words as disfluencies.
-    However, if the speaker says 'I I I don't know what to say'; these are not
-    incomplete words, and this sentence should be transcribed as shown (DAAP
-    also treats repeated words as disfluencies). Do not use hyphens for
-    purposes other than incomplete words, and binding parts of words, as in
-    non-judgmental. Some word processors, including MS Word, sometimes change
-    hyphens used in other contexts into em-dashes or en-dashes, which can
-    cause difficulties.
+incomplete words.    Denote an incomplete word by ending it with exactly one
+hyphen followed by a space. For example, if the speaker stutters and says: "f
+f fail"; this should be transcribed as "f- f- fail"; note the spaces after the
+hyphens.If the speaker starts a word, hesitates, and then either completes the
+word or says another word, type the first partial word with a hyphen at the
+end, followed by a space. For example if the speaker says "some", then
+hesitates, then says "somewhat", transcribe it as "some- somewhat". The reason
+for this rule is that DAAP counts incomplete words as disfluencies. However,
+if the speaker says 'I I I don't know what to say'; these are not incomplete
+words, and this sentence should be transcribed as shown (DAAP also treats
+repeated words as disfluencies). Do not use hyphens for purposes other than
+incomplete words, and binding parts of words, as in non-judgmental. Some word
+processors, including MS Word, sometimes change hyphens used in other contexts
+into em-dashes or en-dashes, which can cause difficulties.
 
 8.  Unclear words. These are noted in square brackets; if the speaker says
 "the" followed by one or more unclear words, type "the [unclear]". It is not
@@ -535,7 +533,7 @@ dictionary density is above the neutral value of .5. (For psychological or
 linguistic variables, negative quantities are sometimes difficult to
 interpret. Each weighted dictionary uses weights between -1 and +1 with 0 as
 neutral value, so words not in the dictionary are given dictionary score of 0,
-as they are with unweighted dictionaries. DAAP09.6.pl linearly transforms
+as they are with unweighted dictionaries. `DAAP09.6.pl` linearly transforms
 these weights to lie between 0 and 1 with .5 as the neutral value.) The MEAN
 HIGH SCORE for a weighted dictionary is the average value of the amount by
 which the smoothed dictionary function for that dictionary is above the
@@ -548,10 +546,10 @@ have the same statistical meaning. The weighted dictionaries all have a
 natural neutral value of .5, the unweighted dictionaries are each given their
 mean over the entire text as a neutral value. The covariation is a measure of
 the extent to which the smoothed dictionary densities are simultaneously
-above, and simultaneously below, their neutral values. CAUTION: The
+above, and simultaneously below, their neutral values. **CAUTION: The
 covariations are generally unreliable for texts with relatively few words, or
 for texts consisting in large part of segments consisting of relatively few
-words. They are generally reliable for texts with more than 25 words.
+words.** They are generally reliable for texts with more than 25 words.
 
 3.  There is an overall FIRST AGGREGATION File (`ProjectAG1.csv`). This file
 contains a separate set of rows for each text. For each text, there is a
@@ -569,8 +567,7 @@ dictionaries. At the bottom of the first aggregation file, there is a separate
 set of rows and columns. There is one row for each speaker. The columns give
 speaker, number of words, overall mean score for each unweighted dictionary,
 and overall mean score, mean high score, and high score proportion for each
-unweighted dictionary. CAUTION: The interpretation of these can be problematic
-if some of speakers in different files are different people.
+unweighted dictionary. **CAUTION: The interpretation of these can be problematic if some of speakers in different files are different people.**
 
 4.  There is a FIRST VARIATIONS File (`ProjectAG1SSD.csv`). This file contains
 the same rows as the First Aggregation File. For each row, the columns list
