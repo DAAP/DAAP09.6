@@ -1,4 +1,4 @@
-THE DISCOURSE ATTRIBUTES ANALYSIS PROGRAM (DAAP09.6) OPERATING INSTRUCTIONS
+THE DISCOURSE ATTRIBUTES ANALYSIS PROGRAM (DAAP09.6) OPERATING INSTRUCTIONS  
 ---------------------------------------------------------------------------
 *Bernard Maskit*  
 *Sunday, June 22, 2014*  
